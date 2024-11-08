@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
         CI = 'true'
+        PATH = "/usr/bin/npm:${env.PATH}"
     }
     stages {
         stage('Build') {
